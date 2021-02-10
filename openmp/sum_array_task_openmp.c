@@ -21,8 +21,8 @@ int main(void){
         for(i=0;i<size;i+=step_size)
         {
             int j,start=i,end=i+step_size-1;
-            printf("Computing sum (%d,%d) from %d of %d\n",omp_get_thread_num(),
-            start,end,omp_get_num_threads());
+            printf("Computing sum (%d,%d) from %d of %d\n",start,end,
+                   omp_get_thread_num(),omp_get_num_threads());
 
             #pragma omp task
             {
